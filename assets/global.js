@@ -1267,3 +1267,26 @@ class BulkAdd extends HTMLElement {
 if (!customElements.get('bulk-add')) {
   customElements.define('bulk-add', BulkAdd);
 }
+
+// Custom JS
+
+// 1. Open/close mobile menu item 'Shop'
+
+function openMobileMenuShop() {
+  const shopBtn = document.querySelector('#HeaderDrawer-Shop')
+  const mobileMenuSlider = document.querySelector('.menu-shop-slider-wrapper')
+
+  function viewMenuSlider () {
+    if (mobileMenuSlider) {
+      mobileMenuSlider.classList.toggle('open')
+    } else {
+      console.log('Error')
+    }
+  }
+  shopBtn.removeEventListener("click", viewMenuSlider)
+  shopBtn.addEventListener('click', viewMenuSlider)
+}
+document.addEventListener('DOMContentLoaded', openMobileMenuShop )
+document.addEventListener('shopify:section:load', openMobileMenuShop )
+
+

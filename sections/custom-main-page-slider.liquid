@@ -1,0 +1,171 @@
+{{ 'section-custom-slider-main-page.css' | asset_url | stylesheet_tag }}
+
+<div class="custom-slider-main-page">
+    <div class="custom-slider-main-page__text-content">
+        <div class="text-content">
+            <h1 class="text-content__title">{{ section.settings.heading }}</h1>
+            <p class="text-content__text">{{ section.settings.description }}</p>
+        </div>
+      <div class="custom-slider-main-page__navigation">
+        <span class="custom-slider-main-page__prev-btn">{{ 'left-arrow.svg' | inline_asset_content }}</span>
+        <span class="custom-slider-main-page__next-btn">{{ 'right-arrow.svg' | inline_asset_content }}</span>
+      </div>
+    </div>
+    <div class="custom-slider-main-page__slider">
+        <div class="swiper-custom-slider-main-page">
+            <div class="swiper-wrapper">
+                {% for product in collections[section.settings.collection].products %}
+                    <div class="swiper-slide custom-slider-main-page--slide">
+                        {% if product %}
+                            {% render 'card-product',
+                                    card_product: product,
+                                    product_collection: collections[section.settings.collection],
+                                    subscribe_btn_label: section.settings.subscribe_button_label,
+                                    subscribe_btn_link: section.settings.subscribe_button_link,
+                                    show_vendor: section.settings.show_vendor,
+                                    media_aspect_ratio: section.settings.image_ratio,
+                                    image_shape: section.settings.image_shape,
+                                    placeholder_image: placeholder_image
+                            %}
+                        {% else %}
+                            <p>Product not found</p>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <script>
+        function initializeSwiper() {
+            const swiperElement = document.querySelector('.swiper');
+
+            if (!swiperElement) {
+                console.log('Error: Swiper container not found');
+                return;
+            }
+
+            if (swiperElement.swiper) {
+                swiperElement.swiper.destroy(true, true);
+            }
+
+            new Swiper('.swiper-custom-slider-main-page', {
+                slidesPerView: 1.2,
+                loop: false,
+                freeMode: false,
+                draggable: true,
+                spaceBetween: 10,
+                slidesPerGroup: 1,
+                observeParents: true,
+                mousewheel: {
+                    invert: false,
+                    forceToAxis: true,
+                    releaseOnEdges: true,
+                    sensitivity: 1,
+                },
+                // scrollbar: {
+                //     el: '.swiper-scrollbar',
+                //     hide: false,
+                //     draggable: true,
+                //     dragSize: 113,
+                //     snapOnRelease: true,
+                //     observeParents: true,
+                //     dragClass: 'swiper-scrollbar-drag-custom'
+                // },
+              breakpoints: {
+                  1024: {
+                    slidesPerView: 3.2,
+                    spaceBetween: 46,
+                    navigation: {
+                      nextEl: ".custom-slider-main-page__next-btn",
+                      prevEl: ".custom-slider-main-page__prev-btn",
+                    }
+                  }
+              }
+            })
+
+            console.log('Main page custom Swiper initialized');
+        }
+
+        document.addEventListener('DOMContentLoaded', initializeSwiper);
+        document.addEventListener('shopify:section:load', initializeSwiper);
+    </script>
+</div>
+
+
+{% schema %}
+{
+  "name": "Custom Product Slider",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Welcome to our store!"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "This is a test component."
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Выберите коллекцию"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_secondary_image",
+      "label": "Показывать второе изображение?",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_vendor",
+      "label": "Показывать бренд?",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_rating",
+      "label": "Показывать рейтинг?",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "quick_add",
+      "label": "Быстрая покупка",
+      "options": [
+        {
+          "value": "none",
+          "label": "Отключить"
+        },
+        {
+          "value": "button",
+          "label": "Кнопка"
+        }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "text",
+      "id": "subscribe_button_label",
+      "default": "Subscribe",
+      "label": "Subscribe"
+    },
+    {
+      "type": "url",
+      "id": "subscribe_button_link",
+      "label": "Subscribe link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Product Slider",
+      "category": "Товары"
+    }
+  ]
+}
+
+{% endschema %}

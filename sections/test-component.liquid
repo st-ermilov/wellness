@@ -1,0 +1,56 @@
+<link href="{{ 'test-component.css' | asset_url }}" rel="stylesheet">
+
+<div class="test-component" style="color: red">
+    <h2>{{ section.settings.heading }}</h2>
+    <p>{{ section.settings.description }}</p>
+    <div id="header-logo" style="color: red; width: 100%; height: 70px; display: block">
+        {% comment %}<ul>{% endcomment %}
+        {% comment %}{%- for collection in collections -%}{% endcomment %}
+        {% comment %}<li>{% endcomment %}
+        {% comment %}{%- if collection.image -%}{% endcomment %}
+        {% comment %}{%- assign collection_image = collection.image -%}{% endcomment %}
+        {% comment %}{%- elsif collection.products.first and collection.products.first.images != empty -%}{% endcomment %}
+        {% comment %}{%- assign collection_image = collection.products.first.featured_image -%}{% endcomment %}
+        {% comment %}{%- else -%}{% endcomment %}
+        {% comment %}{%- assign collection_image = blank -%}{% endcomment %}
+        {% comment %}{%- endif -%}{% endcomment %}
+        {% comment %}{% endcomment %}
+        {% comment %}<a href="{{ collection.url }}">{% endcomment %}
+        {% comment %}<img src="{{ collection_image | img_url: '480x' }}" alt="">{% endcomment %}
+        {% comment %}{{ collection.title }}{% endcomment %}
+        {% comment %}</a>{% endcomment %}
+        {% comment %}</li>{% endcomment %}
+        {% comment %}{%- endfor -%}{% endcomment %}
+        {% comment %}</ul>{% endcomment %}
+        {%- for collection in collections -%}
+            <p>{{ collection.title }} - Handle: {{ collection.handle }}</p>
+            <h1>Collection name: {{ collections['frontpage'].title }}</h1>
+        {%- endfor -%}
+        {% for product in collections['frontpage'].products %}
+            {% if product.featured_image %}
+                <li><img src="{{ product.featured_image | img_url: '480x' }}" alt=""/></li>
+            {% else %}
+                <p>Images not found</p>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+{% schema %}
+{
+  "name": "Test Component",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Welcome to our store!"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "This is a test component."
+    }
+  ]
+}
+{% endschema %}

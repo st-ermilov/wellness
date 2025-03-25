@@ -8,6 +8,13 @@
         "color_scheme": "scheme-1"
       }
     },
+    "custom-button": {
+      "type": "collection-list",
+      "settings": {
+        "button_label": "Shop Now",
+        "button_link": "\/collections\/all"
+      }
+    },
     "product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
@@ -31,6 +38,7 @@
   },
   "order": [
     "banner",
+    "custom-button",
     "product-grid"
   ]
 }

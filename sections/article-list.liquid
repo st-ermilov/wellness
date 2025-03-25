@@ -1,0 +1,97 @@
+{{ 'article-list.css' | asset_url | stylesheet_tag }}
+
+<div class="article-list-wrapper">
+    <div class="article-list-title-container">
+        <h3 class="article-list-title">{{ section.settings.title }}</h3>
+        <div class="article-list-slider__navigation">
+            {% comment %}<div class="article-list-slider__button-prev">{{ 'left-arrow.svg' | inline_asset_content }}</div>{% endcomment %}
+            <div class="article-list-slider__button-prev"><img src="{{ 'left-arrow.svg' | asset_url }}" alt="Previous button"></div>
+            <div class="article-list-slider__button-next">{{ 'right-arrow.svg' | inline_asset_content }}</div>
+        </div>
+    </div>
+    <div class="article-list-slider">
+        <div class="article-list-slider-wrapper swiper-wrapper">
+            {% assign articles = blogs.trulean-recipes.articles %}
+            {% if articles %}
+                {% for article in articles %}
+                    <div class="article-list-slider-slide swiper-slide">
+                        {% render 'card-article',
+                                article: article,
+                                blog: blogs.trulean-recipes
+                        %}
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p>Articles is not found</p>
+            {% endif %}
+        </div>
+    </div>
+    <script>
+        function initializeSwiper() {
+            const swiperElement = document.querySelector('.swiper');
+
+            if (!swiperElement) {
+                console.log('Error: Swiper container not found');
+                return;
+            }
+
+            if (swiperElement.swiper) {
+                swiperElement.swiper.destroy(true, true);
+            }
+
+            new Swiper('.article-list-slider', {
+                slidesPerView: 1.5,
+                loop: false,
+                freeMode: false,
+                draggable: true,
+                spaceBetween: 10,
+                slidesPerGroup: 1,
+                observeParents: true,
+                mousewheel: {
+                    invert: false,
+                    forceToAxis: true,
+                    releaseOnEdges: true,
+                    sensitivity: 1,
+                },
+                breakpoints: {
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 48,
+                        navigation: {
+                            prevEl: '.article-list-slider__button-prev',
+                            nextEl: '.article-list-slider__button-next'
+                        }
+                    }
+                }
+            })
+
+            console.log('Article slider  Swiper initialized');
+        }
+
+        document.addEventListener('DOMContentLoaded', initializeSwiper);
+        document.addEventListener('shopify:section:load', initializeSwiper);
+    </script>
+</div>
+
+{% schema %}
+{
+  "name": "Article list",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Trulean Health and Wellness Blogs"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Article list",
+      "category": "Custom",
+      "settings": {
+        "title": "Trulean Health and Wellness Blogs"
+      }
+    }
+  ]
+}
+{% endschema %}

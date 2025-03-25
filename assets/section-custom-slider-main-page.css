@@ -1,0 +1,127 @@
+.custom-slider-main-page {
+    padding-left: 24px;
+    overflow: hidden;
+}
+
+.custom-slider-main-page__text-content {
+    display: flex;
+}
+
+.custom-slider-main-page__navigation {
+    display: none;
+}
+@media screen and (min-width: 1024px) {
+    .custom-slider-main-page__navigation {
+        display: flex;
+        width: 100%;
+        align-items: end;
+        justify-content: end;
+        padding: 0 60px 50px 0;
+    }
+
+    .custom-slider-main-page__navigation span {
+        cursor: pointer;
+    }
+}
+
+.text-content {
+    max-width: 950px;
+}
+
+@media screen and (min-width: 1024px) {
+    .custom-slider-main-page {
+        padding-left: 60px;
+    }
+}
+
+.custom-slider-main-page--slide {
+    border: 1px solid #F2F1F6;
+}
+
+.custom-slider-main-page .card:not(.ratio) {
+    flex-direction: column !important;
+}
+
+.custom-slider-main-page .card__information {
+    padding: 12px !important;
+}
+
+@media screen and (min-width: 1024px) {
+    .custom-slider-main-page .card__information {
+        padding: 20px !important;
+    }
+}
+
+.custom-slider-main-page .card__information .full-unstyled-link {
+    text-align: start !important;
+    padding: 0 !important;
+    font-family: "Europa Bold";
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+@media screen and (min-width: 1024px) {
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.custom-slider-main-page .rating {
+    display: flex;
+    align-items: center;
+}
+
+.custom-slider-main-page .caption {
+    font-family: 'Europa Regular';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+@media screen and (min-width: 1024px) {
+    .custom-slider-main-page .caption {
+        font-size: 16px;
+        line-height: 16px;
+    }
+}
+
+.custom-slider-main-page .price {
+    line-height: 28px !important;
+    font-size: 20px !important;
+}
+
+.text-content__title {
+    font-family: 'LFT Etica Mono';
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 32px;
+    margin: 50px 0 0 0;
+}
+
+@media screen and (min-width: 1024px) {
+    .text-content__title {
+        font-size: 48px;
+        line-height: 48px;
+        margin: 60px 0 0 0;
+    }
+}
+
+.text-content__text {
+    font-family: 'Europa Regular';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 12px 0 28px 0;
+}
+
+@media screen and (min-width: 1024px) {
+    .text-content__text {
+        font-size: 18px;
+        line-height: 28px;
+        margin: 25px 0 50px 0;
+    }
+}
+
+/*.custom-slider-main-page .button--full-width {*/
+/*    display: block !important;*/
+/*}*/

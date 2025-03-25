@@ -1,0 +1,22 @@
+{{ 'card-article.css' | asset_url | stylesheet_tag }}
+
+<div class="card-article-wrapper">
+    <div class="card-article-content">
+        <div class="card-article-img-wrapper">
+            <img src="{{ article.image | img_url: 'master' }}" alt="Article picture" class="card-article-img">
+        </div>
+        <div class="card-article-text-container">
+            <div class="card-article-blog-title">
+                <h5>{{ blog.title }}</h5>
+            </div>
+            <div class="card-article-info">
+                <span class="card-article--article-author">{{ article.author }}</span>
+                <p class="card-article-excerpt">{{ article.excerpt | strip_html }}</p>
+            </div>
+        </div>
+        <a class="card-article-button" href="{{ article.url }}">
+            <p>Read Article</p>
+            <img src="{{ 'right-arrow.svg' | asset_url }}" alt="">
+        </a>
+    </div>
+</div>

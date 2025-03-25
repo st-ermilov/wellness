@@ -1,0 +1,49 @@
+.follow-us-wrapper{
+    padding: 50px 24px;
+}
+
+.follow-us-title {
+    font-family: 'LFT Etica Mono';
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 32px;
+}
+
+.follow-us-images-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 12px;
+}
+
+.follow-us-images-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media screen and (min-width: 1024px) {
+    .follow-us-wrapper{
+        padding: 60px;
+    }
+
+    .follow-us-title {
+        font-size: 48px;
+        line-height: 48px;
+        margin-bottom: 50px;
+    }
+
+    .follow-us-images-wrapper {
+        display: flex;
+        gap: 24px;
+        justify-content: space-between;
+    }
+
+    .follow-us-images-wrapper img {
+        width: 100%;
+        max-width: 300px;
+        height: 100%;
+        max-height: 260px;
+        object-fit: cover;
+    }
+}

@@ -1,0 +1,63 @@
+.article-list-wrapper {
+    padding: 50px 24px;
+}
+
+
+
+.article-list-title {
+    font-family: 'LFT Etica Mono';
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 32px;
+    margin-bottom: 50px;
+}
+
+.article-list-slider {
+    display: block;
+    width: 100%;
+}
+
+.article-list-slider__navigation {
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .article-list-wrapper {
+        padding: 60px;
+    }
+
+    .article-list-title {
+        font-size: 48px;
+        line-height: 48px;
+    }
+
+    .article-list-slider {
+        display: block;
+        width: 100%;
+    }
+
+    .article-list-title-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 50px;
+
+    }
+
+    .article-list-title-container h3 {
+        margin: 0;
+        max-width: 956px;
+    }
+
+    .article-list-slider__navigation {
+        display: flex;
+        gap: 8px;
+        justify-content: end;
+        align-items: end;
+        align-self: end;
+    }
+
+    .article-list-slider__navigation > * {
+        cursor: pointer;
+    }
+}

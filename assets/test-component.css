@@ -1,0 +1,12 @@
+.test-component {
+    background-color: rgb(var(--color-background-contrast));
+    overflow: scroll;
+}
+
+.test-component p {
+    color: yellow;
+    font-family: "LFT Etica Mono";
+    font-size: 20px;
+    overflow: scroll;
+
+}

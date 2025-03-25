@@ -1,0 +1,79 @@
+{{ 'section-video-reviews.css' | asset_url | stylesheet_tag }}
+
+<div class="video-reviews-wrapper" data-video-reviews="{{ pages.video-reviews.metafields.custom.reviews | escape }}">
+    <div class="video-review-title-container">
+        <h1 class="video-review-title">{{ section.settings.title }}</h1>
+
+        <template class="text-reviews-slider__slide-template">
+            <div class="text-reviews-slider__slide swiper-slide">
+                <div class="text-review-slide-content">
+                    <p class="text-review"></p>
+                    <span class="text-review-author"></span>
+                </div>
+            </div>
+        </template>
+
+        <div class="video_reviews__text-reviews-slider">
+            <div class="text-reviews-slider swiper-wrapper">
+
+            </div>
+        </div>
+        <div class="text-reviews-slider__navigation">
+            <div class="video-reviews-slider-button-prev">{{ 'left-arrow.svg' | inline_asset_content }}</div>
+            <div class="video-reviews-slider-button-next">{{ 'right-arrow.svg' | inline_asset_content }}</div>
+        </div>
+    </div>
+
+    <template class="video-review-card-template">
+        <div class="video-review-slider-slide swiper-slide">
+            <div class="video-review-slide-text-content">
+                <p class="video-review-text"></p>
+                <span class="video-review-author"></span>
+            </div>
+            <a data-fancybox="video-reviews" href="" class="video-review-link" data-width="360"
+               data-height="640">
+                <div class="video-review-wrapper">
+                    <img src="" alt="Video preview" class="video-review-preview">
+                    <img class="custom-play-btn" src="{{ 'play.svg' | asset_url }}" alt="Play video">
+                </div>
+            </a>
+        </div>
+    </template>
+
+    <div class="video-reviews-slider-wrapper">
+        <div class="video-reviews-slider">
+            <script src="{{ 'video-reviews.js' | asset_url }}" defer></script>
+            <div class="video-reviews-slider-wrapper swiper-wrapper"></div>
+
+            <div class="video-reviews-slider-pagination swiper-pagination"></div>
+        </div>
+    </div>
+
+
+</div>
+
+
+{% schema %}
+{
+  "name": "Video reviews",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Our customers reviews"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Video reviews",
+      "category": "Custom",
+      "settings": {
+        "title": "Our customers reviews"
+      }
+    }
+  ]
+}
+{% endschema %}
+
+

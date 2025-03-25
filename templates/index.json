@@ -1,75 +1,329 @@
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
+    "image_with_text_ieQVyU": {
+      "type": "image-with-text",
       "blocks": {
-        "heading": {
+        "heading_7wJmDD": {
           "type": "heading",
           "settings": {
-            "heading": "Browse our latest products",
-            "heading_size": "h0"
+            "heading": "Game-changing hydration backed by science",
+            "heading_size": "h1"
           }
         },
-        "button": {
-          "type": "buttons",
+        "text_pH6UaL": {
+          "type": "text",
           "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify:\/\/collections\/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "text": "<p>Supercharge your hydration, elevate your mood, and make cravings a thing of the past with Everyday Fit™<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_PfzE4a": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop All",
+            "button_link": "shopify:\/\/collections",
+            "button_style_secondary": false,
+            "light_button": true
+          }
+        },
+        "app_buttons_aEkk6V": {
+          "type": "app_buttons",
+          "disabled": true,
+          "settings": {
+            "show_app_buttons": false,
+            "app_store_link": "\/",
+            "play_store_link": "\/"
           }
         }
       },
       "block_order": [
-        "heading",
-        "button"
+        "heading_7wJmDD",
+        "text_pH6UaL",
+        "button_PfzE4a",
+        "app_buttons_aEkk6V"
       ],
       "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "background_image_mob": "shopify:\/\/shop_images\/m-hero-bg_1.png",
+        "background_image_desk": "shopify:\/\/shop_images\/70-Trulean_Nutrition_r1_DFS_2659_1.png",
+        "text_only_mode": true,
+        "text_light_mode": true,
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
         "image_behavior": "none",
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 36
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
+    "icons-section": {
+      "type": "icons-section",
+      "settings": {}
+    },
+    "collection_list_UQgT3E": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_EeUg6y": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "tonic"
+          }
+        },
+        "featured_collection_wUTGjT": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "wellness"
+          }
+        },
+        "featured_collection_dQTyLX": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "frontpage"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_EeUg6y",
+        "featured_collection_wUTGjT",
+        "featured_collection_dQTyLX"
+      ],
       "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 4,
+        "button_label": "Shop All",
+        "button_link": "shopify:\/\/collections",
+        "title": "Featured Categories",
+        "heading_size": "h1",
+        "image_ratio": "portrait",
+        "columns_desktop": 3,
         "color_scheme": "scheme-1",
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
+        "show_view_all": false,
+        "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "image_ratio": "adapt",
-        "image_shape": "default",
+        "padding_top": 36,
+        "padding_bottom": 60
+      }
+    },
+    "image_with_text_nKdWXh": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_qzkdaM": {
+          "type": "heading",
+          "settings": {
+            "heading": "3x Enhanced Hydration",
+            "heading_size": "h1"
+          }
+        },
+        "text_yYKDtr": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Everyday Fit™ is a vitamin-enhanced super powder that dissolves easily in water and is a great replacement for sugary sodas or fruit juices. This water enhancer has just 5 calories, is sugar-free, has no artificial flavors, and tastes amazing in 6 unique flavors. <\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_9HNVwz": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop All",
+            "button_link": "shopify:\/\/collections",
+            "button_style_secondary": false,
+            "light_button": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_qzkdaM",
+        "text_yYKDtr",
+        "button_9HNVwz"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/picture-1-index.png",
+        "height": "adapt",
+        "desktop_image_width": "large",
+        "background_image_mob": "shopify:\/\/shop_images\/m-image-section-bg-1.jpg",
+        "background_image_desk": "shopify:\/\/shop_images\/desctop-bg-1.jpg",
+        "text_only_mode": false,
+        "text_light_mode": false,
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "custom_main_page_slider_dxQgnX": {
+      "type": "custom-main-page-slider",
+      "settings": {
+        "heading": "Tru ingredients. \u2028Tru results. Trulean.",
+        "description": "Trulean only uses natural ingredients, proven by academic research, with ZERO sugars or artificial ingredients. We skip past the “fairy dust” of unnecessary compounds added to so many other products so you get the best hydration, energy, and all natural high quality supplements.",
+        "collection": "wellness",
         "show_secondary_image": true,
         "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "padding_top": 44,
+        "show_rating": true,
+        "quick_add": "button",
+        "subscribe_button_label": "Subscribe",
+        "subscribe_button_link": "shopify:\/\/collections"
+      }
+    },
+    "image_with_text_74xMzj": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_PfcxbU": {
+          "type": "heading",
+          "settings": {
+            "heading": "Immune support when you need it",
+            "heading_size": "h1"
+          }
+        },
+        "text_HtDnHb": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Trulean's Wellness Shot is packed with Immunity boosting vitamins C, D, B12, Turmeric, Ginger Root, Echinacea, Astragalus Root, and Zinc, with no sugar or artificial ingredients! Simply add to water, shoot, and feel it work!<br\/>Strengthen your immune system, reduce inflammation, and improve gut health with Trulean's great-tasting Citrus Turmeric Ginger Wellness Shot.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_EiQJFp": {
+          "type": "button",
+          "settings": {
+            "button_label": "Order Now",
+            "button_link": "shopify:\/\/collections",
+            "button_style_secondary": true,
+            "light_button": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_PfcxbU",
+        "text_HtDnHb",
+        "button_EiQJFp"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Rectangle_4_4.png",
+        "height": "adapt",
+        "desktop_image_width": "large",
+        "background_image_mob": "shopify:\/\/shop_images\/m-image-section-bg-2.jpg",
+        "background_image_desk": "shopify:\/\/shop_images\/image-section-bg-2.jpg",
+        "text_only_mode": false,
+        "text_light_mode": false,
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "testimonials_jKXkq6": {
+      "type": "testimonials",
+      "settings": {
+        "heading": "Testimonials",
+        "background_scheme": ""
+      }
+    },
+    "image_with_text_p6zDi3": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_NAT37K": {
+          "type": "heading",
+          "settings": {
+            "heading": "Clean, functional Nootropics",
+            "heading_size": "h1"
+          }
+        },
+        "text_emW6fL": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Everyday Energy™ is crafted with a blend of scientifically researched Nootropics such as Caffeine, L-Theanine, L-Tyrosine, L-Tuarine, Alpha GPC, Lions Mane, Ginseng, L-Norvaline, and more to promote calm focus and energy to fuel your mind and body throughout the day.<br\/>Nootropics can improve many aspects of your everyday life, especially when it comes to improving performance, decreasing mental fatigue and fog, improving focus at work, maximizing your workouts, or simply handling stress better.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_egApbA": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "light_button": false
+          }
+        },
+        "app_buttons_HTWM47": {
+          "type": "app_buttons",
+          "settings": {
+            "show_app_buttons": true,
+            "app_store_link": "https:\/\/www.apple.com\/app-store\/",
+            "play_store_link": "https:\/\/play.google.com\/store\/games?hl=en&pli=1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_NAT37K",
+        "text_emW6fL",
+        "button_egApbA",
+        "app_buttons_HTWM47"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Rectangle_5.png",
+        "height": "adapt",
+        "desktop_image_width": "large",
+        "background_image_mob": "shopify:\/\/shop_images\/m-image-section-bg-1.jpg",
+        "background_image_desk": "shopify:\/\/shop_images\/desctop-bg-1.jpg",
+        "text_only_mode": false,
+        "text_light_mode": false,
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "video_reviews_MGMpGC": {
+      "type": "video-reviews",
+      "settings": {
+        "title": "What our customers say"
+      }
+    },
+    "article_list_3XtB8E": {
+      "type": "article-list",
+      "settings": {
+        "title": "Trulean Health and Wellness Blogs"
+      }
+    },
+    "follow_us_RddBqK": {
+      "type": "follow-us",
+      "settings": {
+        "title": "Follow Us @truleannutrition"
       }
     }
   },
   "order": [
-    "image_banner",
-    "featured_collection"
+    "image_with_text_ieQVyU",
+    "icons-section",
+    "collection_list_UQgT3E",
+    "image_with_text_nKdWXh",
+    "custom_main_page_slider_dxQgnX",
+    "image_with_text_74xMzj",
+    "testimonials_jKXkq6",
+    "image_with_text_p6zDi3",
+    "video_reviews_MGMpGC",
+    "article_list_3XtB8E",
+    "follow_us_RddBqK"
   ]
 }

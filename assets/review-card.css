@@ -1,0 +1,128 @@
+#reviews-wrapper {
+    display: block;
+    width: 100%;
+    padding: 50px 24px;
+}
+
+@media screen and (min-width: 1024px) {
+    #reviews-wrapper {
+        padding: 60px;
+    }
+}
+
+
+#reviews-wrapper .rating-star::before {
+    content: "★★★★★";
+    font-size: 16px;
+    letter-spacing: 4px;
+    color: #FEC701;
+    background-color: #FEC701;
+}
+
+
+#reviews-wrapper > * {
+    box-sizing: border-box;
+}
+
+.reviews-title > h1 {
+    font-family: 'LFT Etica Mono';
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 32px;
+    margin-top: 0;
+}
+
+@media screen and (min-width: 1024px) {
+    .reviews-title > h1 {
+        font-size: 48px;
+        line-height: 48px;
+        margin-block-end: 50px !important;
+    }
+}
+
+#testimonial-swiper {
+    width: 100%;
+}
+
+.swiper-slide.review-card-wrapper {
+    /*max-width: 99.5%;*/
+    border: 1px solid #EDEDED;
+    margin-bottom: 30px;
+}
+
+
+.review-card-header {
+    display: flex;
+    padding: 16px 24px;
+    background-color: #EDEDED;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+    height: 60px;
+}
+
+.rating-count-total-reviews {
+    font-family: 'Europa-Regular';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.product-title {
+    font-family: 'Europa Bold';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0;
+}
+
+.review-content {
+    padding: 24px 20px;
+    min-height: 244px;
+}
+
+.reviews-pagination {
+    display: flex;
+    justify-content: center;
+}
+
+#reviews-wrapper .swiper-pagination-bullet {
+    border: 1px solid black;
+    color: black;
+    background-color: transparent;
+    width: 10px;
+    height: 10px;
+}
+
+#reviews-wrapper .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: black;
+}
+
+.review-person-info {
+    display: flex;
+    gap: 16px;
+    justify-content: start;
+    margin-bottom: 12px;
+}
+
+.review-person-info > p {
+    font-family: 'Europa Regular';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.review-card-avatar {
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    border: 1px solid gray;
+}
+
+.review-text {
+    font-family: 'Europa Regular';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+
+}

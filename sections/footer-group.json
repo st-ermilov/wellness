@@ -1,1 +1,59 @@
-{"name":"t:sections.footer.name","type":"footer","sections":{"footer":{"type":"footer","settings":{"color_scheme":"scheme-1","newsletter_enable":true,"newsletter_heading":"Subscribe to our emails","enable_follow_on_shop":true,"show_social":true,"enable_country_selector":true,"enable_language_selector":true,"payment_enable":true,"show_policy":true,"margin_top":0,"padding_top":36,"padding_bottom":36}}},"order":["footer"]}
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "newsletter_enable": true,
+        "newsletter_heading": "Subscribe To Our Newsletter",
+        "newsletter_text": "Every now and then, we send an email with recipes, thoughts and other nice things.",
+        "enable_follow_on_shop": true,
+        "show_social": true,
+        "enable_country_selector": true,
+        "enable_language_selector": true,
+        "payment_enable": true,
+        "show_policy": true,
+        "margin_top": 0,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "show_social_links": true,
+        "show_instagram": true,
+        "instagram_url": "\/",
+        "instagram_icon": "shopify:\/\/shop_images\/instagram_white.svg",
+        "show_facebook": true,
+        "facebook_url": "\/",
+        "facebook_icon": "shopify:\/\/shop_images\/facebook_white.svg",
+        "show_youtube": true,
+        "youtube_url": "\/",
+        "youtube_icon": "shopify:\/\/shop_images\/youtube_white.svg",
+        "show_tiktok": false,
+        "tiktok_url": "\/",
+        "show_x": false,
+        "x_url": "\/",
+        "show_pinterest": false,
+        "pinterest_url": "\/",
+        "show_snapchat": false,
+        "snapchat_url": "\/",
+        "show_tumblr": false,
+        "tumblr_url": "\/",
+        "show_vimeo": false,
+        "vimeo_url": "\/",
+        "mobile_background_image": "shopify:\/\/shop_images\/m-footer-bg.jpg",
+        "desktop_background_image": "shopify:\/\/shop_images\/footer-bg.png",
+        "bottom_header_text": "Statements appearing on this website have not been evaluated by the Food and Drug Administration (FDA). The efficacy of these products has not been confirmed by FDA-approved research. Products featured are not intended to diagnose, prevent, treat, or cure any disease. Information here is not intended as a substitute for or alternative to information from healthcare practitioners.",
+        "show_app_links": true,
+        "show_appstore": true,
+        "appstore_url": "\/",
+        "appstore_icon": "shopify:\/\/shop_images\/app-store.png",
+        "show_googleplay": true,
+        "googleplay_url": "\/",
+        "googleplay_icon": "shopify:\/\/shop_images\/google-play.png"
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}

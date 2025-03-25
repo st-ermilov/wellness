@@ -1,0 +1,35 @@
+{{ 'icons-section.css' | asset_url | stylesheet_tag }}
+
+
+<div class="icons-section-wrapper">
+    <div class="icons-section-container">
+        <div class="icons-section-item">
+            {{ 'icons-section-1.svg' | inline_asset_content }}
+            <p>Gluten Free</p>
+        </div>
+        <div class="icons-section-item">
+            {{ 'icons-section-2.svg' | inline_asset_content }}
+            <p>Plant Based</p>
+        </div>
+        <div class="icons-section-item">
+            {{ 'icons-section-3.svg' | inline_asset_content }}
+            <p>100% Organic</p>
+        </div>
+        <div class="icons-section-item">
+            {{ 'icons-section-4.svg' | inline_asset_content }}
+            <p>Sugar Free</p>
+        </div>
+        <div class="icons-section-item">
+            {{ 'icons-section-5.svg' | inline_asset_content }}
+            <p>100% Grass Fed </p>
+        </div>
+    </div>
+</div>
+{% schema %}
+{
+  "name": "Icon List",
+  "tag": "section",
+  "class": "icons-section",
+  "settings": []
+}
+{% endschema %}
