@@ -37,15 +37,15 @@
 }
 
 #collection-card {
-    max-width: 392px;
+    /*max-width: 392px;*/
 }
 
 @media screen and (min-width: 1024px) {
     #collection-card {
-        min-height: 500px;
+        /*min-height: 500px;*/
     }
     #collection-card img {
-        min-height: 440px;
+        max-height: 440px;
         flex-grow: 1;
         /*object-fit: cover;*/
     }
@@ -92,7 +92,6 @@
 /* base */
 
 .page-width {
-    max-width: 1440px;
     margin: 0 auto;
     padding: 0 2.4rem;
 }
@@ -128,6 +127,7 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
     .utility-bar__grid.page-width {
         padding-left: 3.2rem;
         padding-right: 3.2rem;
+        max-width: 1440px;
     }
 
     .page-width--narrow {
@@ -947,7 +947,7 @@ summary::-webkit-details-marker {
 
 
 .grid--gapless.grid {
-    column-gap: 0;
+    column-gap: 4rem;
     row-gap: 0;
 }
 
@@ -1041,7 +1041,8 @@ summary::-webkit-details-marker {
 
     .grid--3-col-desktop .grid__item {
         width: calc(33.33% - var(--grid-desktop-horizontal-spacing) * 2 / 3);
-        max-width: calc(33.33% - var(--grid-desktop-horizontal-spacing) * 2 / 3);
+        /*max-width: calc(33.33% - var(--grid-desktop-horizontal-spacing) * 2 / 3);*/
+        max-width: 392px;
     }
 
     .grid--2-col-desktop .grid__item {
@@ -3012,6 +3013,7 @@ details-disclosure > details {
     position: relative;
     align-items: stretch;
 }
+
 
 .ratio::before {
     content: '';

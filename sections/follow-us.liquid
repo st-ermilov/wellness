@@ -1,24 +1,26 @@
 {{ 'section-follow-us.css' | asset_url | stylesheet_tag }}
 
-<div class="follow-us-wrapper">
-    <div class="follow-us-title-wrapper">
-        <h1 class="follow-us-title">
-            {{ section.settings.title }}
-        </h1>
-    </div>
-    <div class="follow-us-images-wrapper">
-        <img src="{{ 'follow-us-mobile-1.png' | asset_url }}"
-             srcset="{{ 'follow-us-desctop-1.png' | asset_url }} 1024w"
-             sizes="(min-width: 1024px) 100vw" alt="Follow us picture">
-        <img src="{{ 'follow-us-mobile-2.png' | asset_url }}"
-             srcset="{{ 'follow-us-desctop-2.png' | asset_url }} 1024w"
-             sizes="(min-width: 1024px) 100vw" alt="Follow us picture">
-        <img src="{{ 'follow-us-mobile-3.png' | asset_url }}"
-             srcset="{{ 'follow-us-desctop-3.png' | asset_url }} 1024w"
-             sizes="(min-width: 1024px) 100vw" alt="Follow us picture">
-        <img src="{{ 'follow-us-mobile-4.png' | asset_url }}"
-             srcset="{{ 'follow-us-desctop-4.png' | asset_url }} 1024w"
-             sizes="(min-width: 1024px) 100vw" alt="Follow us picture">
+<div class="follow-us-section-wrapper">
+    <div class="follow-us-wrapper">
+        <div class="follow-us-title-wrapper">
+            <h1 class="follow-us-title">
+                {{ section.settings.title }}
+            </h1>
+        </div>
+        <div class="follow-us-images-wrapper">
+            <img src="{{ 'follow-us-mobile-1.png' | asset_url }}"
+                 srcset="{{ 'follow-us-desctop-1.png' | asset_url }} 1024w"
+                 sizes="(min-width: 1024px) 100vw" alt="Follow us picture">
+            <img src="{{ 'follow-us-mobile-2.png' | asset_url }}"
+                 srcset="{{ 'follow-us-desctop-2.png' | asset_url }} 1024w"
+                 sizes="(min-width: 1024px) 100vw" alt="Follow us picture">
+            <img src="{{ 'follow-us-mobile-3.png' | asset_url }}"
+                 srcset="{{ 'follow-us-desctop-3.png' | asset_url }} 1024w"
+                 sizes="(min-width: 1024px) 100vw" alt="Follow us picture">
+            <img src="{{ 'follow-us-mobile-4.png' | asset_url }}"
+                 srcset="{{ 'follow-us-desctop-4.png' | asset_url }} 1024w"
+                 sizes="(min-width: 1024px) 100vw" alt="Follow us picture">
+        </div>
     </div>
 </div>
 

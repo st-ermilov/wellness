@@ -1,6 +1,7 @@
 .custom-slider-main-page {
     padding-left: 24px;
     overflow: hidden;
+    max-width: 1440px;
 }
 
 .custom-slider-main-page__text-content {
@@ -122,6 +123,15 @@
     }
 }
 
+@media screen and (min-width: 1200px) {
+    .custom-slider-main-page-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-height: 1200px;
+    }
+}
 /*.custom-slider-main-page .button--full-width {*/
 /*    display: block !important;*/
 /*}*/

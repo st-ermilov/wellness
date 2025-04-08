@@ -372,7 +372,7 @@
 
 @media screen and (min-width: 990px) {
     .image-with-text__content {
-        padding: 6rem 0 7rem 10rem;
+        padding: 6rem 0 7rem 6rem;
     }
     .image-with-text__grid--reverse .image-with-text__content {
         padding: 6rem 0 7rem 0;
@@ -496,6 +496,15 @@
         /*height: 580px !important;*/
     }
 }
+
+@media screen and (min-width: 1200px){
+    .image-with-text--custom-wrapper {
+        min-height: 740px;
+        max-width: 1440px;
+        flex-grow: 1;
+    }
+}
+
 .image-with-text--custom-wrapper.text-only {
     padding: 40px 24px 0 24px;
 }

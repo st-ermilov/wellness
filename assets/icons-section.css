@@ -1,6 +1,14 @@
+.icons-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .icons-section-wrapper {
     display: flex;
     width: 100%;
+    max-width: 1440px;
 }
 
 .icons-section-container {

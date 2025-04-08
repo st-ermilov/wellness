@@ -239,6 +239,8 @@ class CartItems extends HTMLElement {
     return new DOMParser().parseFromString(html, 'text/html').querySelector(selector).innerHTML;
   }
 
+
+
   enableLoading(line) {
     const mainCartItems = document.getElementById('main-cart-items') || document.getElementById('CartDrawer-CartItems');
     mainCartItems.classList.add('cart__items--disabled');
@@ -284,3 +286,6 @@ if (!customElements.get('cart-note')) {
     }
   );
 }
+
+
+

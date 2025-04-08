@@ -44,11 +44,11 @@
       {% if request.page_type == "index" %} index-card-information {% endif %}
       {{ custom_class }}
     "
-            style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
+            style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%; max-height: 500px"
     >
         <div
                 class="card__inner {% if card_style == 'standard' %}color-{{ card_color_scheme }} gradient{% endif %}{% if card_collection.featured_image or card_style == 'standard' %} ratio{% endif %}"
-                style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
+                style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;" id="collection-card__inner"
         >
             {%- if card_collection.featured_image -%}
                 <div class="card__media">

@@ -1,9 +1,28 @@
-@media screen and (min-width: 1024px) {
+.video-reviews-wrapper {
+    position: relative;
+}
+
+@media screen and (min-width: 1200px) {
     .video-reviews-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+}
+
+.video-reviews-container {
+    position: relative;
+}
+
+@media screen and (min-width: 1024px) {
+    .video-reviews-container {
         display: flex;
         width: 100%;
         padding: 60px;
         position: relative;
+        justify-content: center;
+        max-width: 1440px;
     }
 }
 
@@ -42,7 +61,6 @@
     box-sizing: content-box !important;
     width: 100%;
     position: relative;
-    padding-bottom: 15px;
 }
 
 
@@ -64,16 +82,19 @@
         padding: 0;
         margin-top: 0;
     }
+
     .video-review-title {
         font-size: 48px;
         line-height: 48px;
     }
+
     .text-review {
         font-family: 'LFT Etica Mono';
         font-weight: 700;
         font-size: 28px;
         line-height: 36px;
     }
+
     .text-review-author {
         font-family: 'Europa Regular';
         font-weight: 400;
@@ -138,16 +159,16 @@
     height: 100%;
 }
 
-.video-review-slider-slide {
-    margin-bottom: 24px;
-}
 
-@media screen and (min-width: 1024px) {
-    .video-reviews-slider-pagination.swiper-pagination {
-        display: none;
-    }
-}
 
+
+
+.video-reviews-slider-pagination.swiper-pagination {
+    display: flex;
+    justify-content: center;
+    /*background-color: red;*/
+    bottom: -24px;
+}
 
 .video-reviews-slider-pagination .swiper-pagination-bullet {
     border: 1px solid black;
@@ -165,14 +186,21 @@
     display: none;
 }
 
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 1024px) {
+    .video-reviews-slider-pagination {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1024px) {
     .text-reviews-slider__navigation {
         display: flex;
         margin-top: 24px;
         gap: 8px;
     }
+
     .text-reviews-slider__navigation > * {
-       cursor: pointer;
+        cursor: pointer;
     }
 }
 

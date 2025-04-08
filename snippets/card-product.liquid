@@ -229,19 +229,12 @@
                             <div class="color-variants">
                                 {% for variant in card_product.variants %}
                                     <img src="{{ variant.featured_image.src | img_url: '300x300' }}"
-                                         alt="{{ variant.title }}"/>
+                                         alt="{{ variant.title }}"
+                                         style="width: 24px; height: 24px; border-radius: 50%"/>
                                 {% endfor %}
                             </div>
                         {% endif %}
 
-                        {% comment %}{% if product_collection.metafields.custom != blank %}{% endcomment %}
-                        {% comment %}<p>У коллекции есть метафилды!</p>{% endcomment %}
-                        {% comment %}{% else %}{% endcomment %}
-                        {% comment %}<p>Метафилды не найдены</p>{% endcomment %}
-                        {% comment %}{% endif %}{% endcomment %}
-                        {% comment %}<p>Custom метафилды: {{ product_collection.metafields.custom }}</p>{% endcomment %}
-                        {% comment %}<p>Global метафилды: {{ product_collection.metafields.global }}</p>{% endcomment %}
-                        {% comment %}<p>Category метафилды: {{ product_collection.metafields.category_data.flavor[0] }}</p>{% endcomment %}
                         {% if card_product.metafields.custom.flavor != blank %}
                             <div class="product-flavor">
                                 <p class="product-flavor--info">
@@ -254,7 +247,10 @@
 
 
                         <div class="card-product-buttons-container">
-                            {% render 'buy-buttons', product: card_product, custom_class: 'custom-add-cart-btn-class'  %}
+                            {% render 'buy-buttons',
+                                    product: card_product,
+                                    section_id: section_id,
+                                    custom_class: 'custom-add-cart-btn-class' %}
                             <a
                                     {% if subscribe_btn_label == blank %}
                                         role="link" aria-disabled="true"

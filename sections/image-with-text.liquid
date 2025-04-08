@@ -6,6 +6,11 @@
     {% comment %}padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;{% endcomment %}
     }
 
+    .section-{{ section.id }}-padding > .page-width {
+    display: flex;
+    justify-content: {% if section.settings.content_alignment == 'center' %} center {% elsif section.settings.content_alignment == 'left' %} space-between {% endif %};
+    }
+
     {% if section.settings.background_image_mob != blank %}
         .section-{{ section.id }}-padding .page-width {
         background-image: url("{{ section.settings.background_image_mob | img_url: '750x' }}");
@@ -229,6 +234,26 @@
       "id": "text_only_mode",
       "label": "Text-only mode (hide image & move text up)",
       "default": false
+    },
+    {
+      "type": "select",
+      "id": "content_alignment",
+      "label": "Content Alignment",
+      "default": "center",
+      "options": [
+        {
+          "label": "Left",
+          "value": "left"
+        },
+        {
+          "label": "Center",
+          "value": "center"
+        },
+        {
+          "label": "Right",
+          "value": "right"
+        }
+      ]
     },
     {
       "type": "checkbox",

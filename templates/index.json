@@ -48,6 +48,7 @@
         "background_image_mob": "shopify:\/\/shop_images\/m-hero-bg_1.png",
         "background_image_desk": "shopify:\/\/shop_images\/70-Trulean_Nutrition_r1_DFS_2659_1.png",
         "text_only_mode": true,
+        "content_alignment": "left",
         "text_light_mode": true,
         "layout": "image_first",
         "desktop_content_position": "top",
@@ -146,6 +147,7 @@
         "background_image_mob": "shopify:\/\/shop_images\/m-image-section-bg-1.jpg",
         "background_image_desk": "shopify:\/\/shop_images\/desctop-bg-1.jpg",
         "text_only_mode": false,
+        "content_alignment": "center",
         "text_light_mode": false,
         "layout": "image_first",
         "desktop_content_position": "top",
@@ -212,6 +214,7 @@
         "background_image_mob": "shopify:\/\/shop_images\/m-image-section-bg-2.jpg",
         "background_image_desk": "shopify:\/\/shop_images\/image-section-bg-2.jpg",
         "text_only_mode": false,
+        "content_alignment": "center",
         "text_light_mode": false,
         "layout": "text_first",
         "desktop_content_position": "middle",
@@ -281,6 +284,7 @@
         "background_image_mob": "shopify:\/\/shop_images\/m-image-section-bg-1.jpg",
         "background_image_desk": "shopify:\/\/shop_images\/desctop-bg-1.jpg",
         "text_only_mode": false,
+        "content_alignment": "center",
         "text_light_mode": false,
         "layout": "image_first",
         "desktop_content_position": "top",
@@ -296,6 +300,40 @@
     },
     "video_reviews_MGMpGC": {
       "type": "video-reviews",
+      "blocks": {
+        "video_review_block_GnrjyN": {
+          "type": "video_review_block",
+          "settings": {
+            "preview_image": "shopify:\/\/shop_images\/video-1.png",
+            "video_url": "https:\/\/www.youtube.com\/shorts\/Qa8N7csGwkM",
+            "review_text": "\"Amazing quality and super fast delivery! Highly recommended.\"",
+            "review_author": "Emily R."
+          }
+        },
+        "video_review_block_gzwDDK": {
+          "type": "video_review_block",
+          "settings": {
+            "preview_image": "shopify:\/\/shop_images\/video-2.png",
+            "video_url": "https:\/\/www.youtube.com\/shorts\/C6A_A_pcQDI",
+            "review_text": "\"So good and actually natural ingredients\"",
+            "review_author": "Liza S."
+          }
+        },
+        "video_review_block_AGLGB9": {
+          "type": "video_review_block",
+          "settings": {
+            "preview_image": "shopify:\/\/shop_images\/video-1.png",
+            "video_url": "https:\/\/www.youtube.com\/shorts\/qofHft8V07c",
+            "review_text": "\"Excellent customer service and the product exceeded my expectations.\"",
+            "review_author": "Sophia L."
+          }
+        }
+      },
+      "block_order": [
+        "video_review_block_GnrjyN",
+        "video_review_block_gzwDDK",
+        "video_review_block_AGLGB9"
+      ],
       "settings": {
         "title": "What our customers say"
       }

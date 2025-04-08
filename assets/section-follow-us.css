@@ -22,9 +22,17 @@
     object-fit: cover;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
+    .follow-us-section-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
     .follow-us-wrapper{
         padding: 60px;
+        max-width: 1440px;
     }
 
     .follow-us-title {

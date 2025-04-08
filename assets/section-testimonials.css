@@ -1,3 +1,25 @@
+
+@media screen and (min-width: 1200px) {
+    #reviews-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+}
+
+
+#reviews-wrapper > .reviews-content {
+    max-width: 1440px;
+}
+
+@media screen and (min-width: 1200px) {
+    #reviews-wrapper > .reviews-content {
+        padding: 60px;
+    }
+}
+
+
 .reviews-slider {
     max-width: 100%;
 }

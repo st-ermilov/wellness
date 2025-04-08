@@ -1,6 +1,17 @@
 .article-list-wrapper {
-    padding: 50px 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0;
 }
+
+.article-list-container {
+    padding: 50px 24px;
+    max-width: 1440px;
+    overflow: hidden;
+}
+
 
 
 
@@ -22,7 +33,7 @@
 }
 
 @media screen and (min-width: 1024px) {
-    .article-list-wrapper {
+    .article-list-container {
         padding: 60px;
     }
 

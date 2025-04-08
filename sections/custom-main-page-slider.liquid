@@ -1,94 +1,97 @@
 {{ 'section-custom-slider-main-page.css' | asset_url | stylesheet_tag }}
 
-<div class="custom-slider-main-page">
-    <div class="custom-slider-main-page__text-content">
-        <div class="text-content">
-            <h1 class="text-content__title">{{ section.settings.heading }}</h1>
-            <p class="text-content__text">{{ section.settings.description }}</p>
-        </div>
-      <div class="custom-slider-main-page__navigation">
-        <span class="custom-slider-main-page__prev-btn">{{ 'left-arrow.svg' | inline_asset_content }}</span>
-        <span class="custom-slider-main-page__next-btn">{{ 'right-arrow.svg' | inline_asset_content }}</span>
-      </div>
-    </div>
-    <div class="custom-slider-main-page__slider">
-        <div class="swiper-custom-slider-main-page">
-            <div class="swiper-wrapper">
-                {% for product in collections[section.settings.collection].products %}
-                    <div class="swiper-slide custom-slider-main-page--slide">
-                        {% if product %}
-                            {% render 'card-product',
-                                    card_product: product,
-                                    product_collection: collections[section.settings.collection],
-                                    subscribe_btn_label: section.settings.subscribe_button_label,
-                                    subscribe_btn_link: section.settings.subscribe_button_link,
-                                    show_vendor: section.settings.show_vendor,
-                                    media_aspect_ratio: section.settings.image_ratio,
-                                    image_shape: section.settings.image_shape,
-                                    placeholder_image: placeholder_image
-                            %}
-                        {% else %}
-                            <p>Product not found</p>
-                        {% endif %}
-                    </div>
-                {% endfor %}
+<div class="custom-slider-main-page-wrapper">
+    <div class="custom-slider-main-page">
+        <div class="custom-slider-main-page__text-content">
+            <div class="text-content">
+                <h1 class="text-content__title">{{ section.settings.heading }}</h1>
+                <p class="text-content__text">{{ section.settings.description }}</p>
+            </div>
+            <div class="custom-slider-main-page__navigation">
+                <span class="custom-slider-main-page__prev-btn">{{ 'left-arrow.svg' | inline_asset_content }}</span>
+                <span class="custom-slider-main-page__next-btn">{{ 'right-arrow.svg' | inline_asset_content }}</span>
             </div>
         </div>
-    </div>
-    <script>
-        function initializeSwiper() {
-            const swiperElement = document.querySelector('.swiper');
+        <div class="custom-slider-main-page__slider">
+            <div class="swiper-custom-slider-main-page">
+                <div class="swiper-wrapper">
+                    {% for product in collections[section.settings.collection].products %}
+                        <div class="swiper-slide custom-slider-main-page--slide">
+                            {% if product %}
+                                {% render 'card-product',
+                                        card_product: product,
+                                        product_collection: collections[section.settings.collection],
+                                        subscribe_btn_label: section.settings.subscribe_button_label,
+                                        subscribe_btn_link: section.settings.subscribe_button_link,
+                                        show_vendor: section.settings.show_vendor,
+                                        media_aspect_ratio: section.settings.image_ratio,
+                                        image_shape: section.settings.image_shape,
+                                        placeholder_image: placeholder_image,
+                                        section_id: section.id
+                                %}
+                            {% else %}
+                                <p>Product not found</p>
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <script>
+            function initializeSwiper() {
+                const swiperElement = document.querySelector('.swiper');
 
-            if (!swiperElement) {
-                console.log('Error: Swiper container not found');
-                return;
-            }
+                if (!swiperElement) {
+                    console.log('Error: Swiper container not found');
+                    return;
+                }
 
-            if (swiperElement.swiper) {
-                swiperElement.swiper.destroy(true, true);
-            }
+                if (swiperElement.swiper) {
+                    swiperElement.swiper.destroy(true, true);
+                }
 
-            new Swiper('.swiper-custom-slider-main-page', {
-                slidesPerView: 1.2,
-                loop: false,
-                freeMode: false,
-                draggable: true,
-                spaceBetween: 10,
-                slidesPerGroup: 1,
-                observeParents: true,
-                mousewheel: {
-                    invert: false,
-                    forceToAxis: true,
-                    releaseOnEdges: true,
-                    sensitivity: 1,
-                },
-                // scrollbar: {
-                //     el: '.swiper-scrollbar',
-                //     hide: false,
-                //     draggable: true,
-                //     dragSize: 113,
-                //     snapOnRelease: true,
-                //     observeParents: true,
-                //     dragClass: 'swiper-scrollbar-drag-custom'
-                // },
-              breakpoints: {
-                  1024: {
-                    slidesPerView: 3.2,
-                    spaceBetween: 46,
-                    navigation: {
-                      nextEl: ".custom-slider-main-page__next-btn",
-                      prevEl: ".custom-slider-main-page__prev-btn",
+                new Swiper('.swiper-custom-slider-main-page', {
+                    slidesPerView: 1.2,
+                    loop: false,
+                    freeMode: false,
+                    draggable: true,
+                    spaceBetween: 10,
+                    slidesPerGroup: 1,
+                    observeParents: true,
+                    mousewheel: {
+                        invert: false,
+                        forceToAxis: true,
+                        releaseOnEdges: true,
+                        sensitivity: 1,
+                    },
+                    // scrollbar: {
+                    //     el: '.swiper-scrollbar',
+                    //     hide: false,
+                    //     draggable: true,
+                    //     dragSize: 113,
+                    //     snapOnRelease: true,
+                    //     observeParents: true,
+                    //     dragClass: 'swiper-scrollbar-drag-custom'
+                    // },
+                    breakpoints: {
+                        1024: {
+                            slidesPerView: 3.2,
+                            spaceBetween: 46,
+                            navigation: {
+                                nextEl: ".custom-slider-main-page__next-btn",
+                                prevEl: ".custom-slider-main-page__prev-btn",
+                            }
+                        }
                     }
-                  }
-              }
-            })
+                })
 
-            console.log('Main page custom Swiper initialized');
-        }
+                console.log('Main page custom Swiper initialized');
+            }
 
-        document.addEventListener('DOMContentLoaded', initializeSwiper);
-        document.addEventListener('shopify:section:load', initializeSwiper);
-    </script>
+            document.addEventListener('DOMContentLoaded', initializeSwiper);
+            document.addEventListener('shopify:section:load', initializeSwiper);
+        </script>
+    </div>
 </div>
 
 
