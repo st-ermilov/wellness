@@ -148,105 +148,113 @@ document.addEventListener('shopify:section:load', initializeSwiper)
 // })
 
 function initializeSwiper() {
-    const mainSwiperElement = document.querySelector('.video-reviews-slider');
-    const thumbSwiperElement = document.querySelector('.video_reviews__text-reviews-slider');
 
-    if (!mainSwiperElement || !thumbSwiperElement) {
-        console.log('Error: Swiper container not found');
-        return;
-    }
+    document.querySelectorAll('.video-reviews-wrapper').forEach((swiperInstance) => {
 
-    if (mainSwiperElement.swiper) {
-        mainSwiperElement.swiper.destroy(true, true);
-    }
-    if (thumbSwiperElement.swiper) {
-        thumbSwiperElement.swiper.destroy(true, true);
-    }
+        const mainSwiperElement = swiperInstance.querySelector('.video-reviews-slider');
+        const thumbSwiperElement = swiperInstance.querySelector('.video_reviews__text-reviews-slider');
 
-    const thumbSwiper = new Swiper('.video_reviews__text-reviews-slider', {
-        slidesPerView: 1,
-        spaceBetween: 10,
-        watchSlidesVisibility: true,
-        watchSlidesProgress: true,
-        centeredSlides: true,
-        freeMode: false,
-        draggable: true,
-        observeParents: true,
-        mousewheel: {
-            invert: false,
-            forceToAxis: true,
-            releaseOnEdges: true,
-            sensitivity: 1,
+        const paginationMainSwiper = swiperInstance.querySelector('.video-reviews-slider-pagination')
+        const prevBtn = swiperInstance.querySelector('.video-reviews-slider-button-prev')
+        const nextBtn = swiperInstance.querySelector('.video-reviews-slider-button-next')
+
+        if (!mainSwiperElement || !thumbSwiperElement) {
+            console.log('Error: Swiper container not found');
+            return;
         }
-    });
 
-    // Создаём основной Swiper с привязкой к Thumbs Swiper
-    const mainSwiper = new Swiper('.video-reviews-slider', {
-        slidesPerView: 1.2,
-        initialSlide: 1,
-        centeredSlides: true,
-        loop: false,
-        freeMode: false,
-        draggable: true,
-        spaceBetween: 10,
-        slidesPerGroup: 1,
-        observeParents: true,
-        mousewheel: {
-            invert: false,
-            forceToAxis: true,
-            releaseOnEdges: true,
-            sensitivity: 1,
-        },
-        pagination: {
-            el: '.video-reviews-slider-pagination',
-            clickable: true,
-            dynamicBullets: false
-        },
-        on: {
-            init: function () {
-                setTimeout(() => {
-                    this.update();
-                    this.slideToLoop(0, 0, false);
-                }, 50);
-            }
-        },
-        breakpoints: {
-            1024: {
-                slidesPerView: 1.9,
-                initialSlide: 0,
-                centeredSlides: true,
-                loop: false,
-                freeMode: false,
-                draggable: true,
-                spaceBetween: 48,
-                slidesPerGroup: 1,
-                observeParents: true,
-                mousewheel: {
-                    invert: false,
-                    forceToAxis: true,
-                    releaseOnEdges: true,
-                    sensitivity: 1,
-                },
-                navigation: {
-                    prevEl: '.video-reviews-slider-button-prev',
-                    nextEl: '.video-reviews-slider-button-next'
-                },
-            }
+        if (mainSwiperElement.swiper) {
+            mainSwiperElement.swiper.destroy(true, true);
         }
+        if (thumbSwiperElement.swiper) {
+            thumbSwiperElement.swiper.destroy(true, true);
+        }
+
+        const thumbSwiper = new Swiper(thumbSwiperElement, {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            watchSlidesVisibility: true,
+            watchSlidesProgress: true,
+            centeredSlides: true,
+            freeMode: false,
+            draggable: true,
+            observeParents: true,
+            mousewheel: {
+                invert: false,
+                forceToAxis: true,
+                releaseOnEdges: true,
+                sensitivity: 1,
+            }
+        });
+
+        const mainSwiper = new Swiper(mainSwiperElement, {
+            slidesPerView: 1.2,
+            initialSlide: 1,
+            centeredSlides: true,
+            loop: false,
+            freeMode: false,
+            draggable: true,
+            spaceBetween: 10,
+            slidesPerGroup: 1,
+            observeParents: true,
+            mousewheel: {
+                invert: false,
+                forceToAxis: true,
+                releaseOnEdges: true,
+                sensitivity: 1,
+            },
+            pagination: {
+                el: paginationMainSwiper,
+                clickable: true,
+                dynamicBullets: false
+            },
+            on: {
+                init: function () {
+                    setTimeout(() => {
+                        this.update();
+                        this.slideToLoop(0, 0, false);
+                    }, 50);
+                }
+            },
+            breakpoints: {
+                1024: {
+                    slidesPerView: 1.9,
+                    initialSlide: 0,
+                    centeredSlides: true,
+                    loop: false,
+                    freeMode: false,
+                    draggable: true,
+                    spaceBetween: 48,
+                    slidesPerGroup: 1,
+                    observeParents: true,
+                    mousewheel: {
+                        invert: false,
+                        forceToAxis: true,
+                        releaseOnEdges: true,
+                        sensitivity: 1,
+                    },
+                    navigation: {
+                        prevEl: prevBtn,
+                        nextEl: nextBtn
+                    },
+                }
+            }
+        })
+
+        thumbSwiper.on('slideChange', function () {
+            const index = thumbSwiper.realIndex;
+            mainSwiper.slideToLoop(index);
+        });
+
+        mainSwiper.on('slideChange', function () {
+            const index = mainSwiper.realIndex;
+            thumbSwiper.slideTo(index);
+        });
+
+        console.log('Review Swiper and Thumbnail Swiper initialized');
+
     })
 
-    thumbSwiper.on('slideChange', function () {
-        const index = thumbSwiper.realIndex;
-        mainSwiper.slideToLoop(index);
-    });
-
-    // Синхронизация: при листании основного слайдера обновляется thumbSwiper
-    mainSwiper.on('slideChange', function () {
-        const index = mainSwiper.realIndex;
-        thumbSwiper.slideTo(index);
-    });
-
-    console.log('Review Swiper and Thumbnail Swiper initialized');
 }
 
 

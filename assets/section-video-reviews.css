@@ -166,7 +166,6 @@
 .video-reviews-slider-pagination.swiper-pagination {
     display: flex;
     justify-content: center;
-    /*background-color: red;*/
     bottom: -24px;
 }
 
