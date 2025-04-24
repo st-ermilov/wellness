@@ -338,6 +338,46 @@
         "title": "What our customers say"
       }
     },
+    "video_reviews_rBRL6A": {
+      "type": "video-reviews",
+      "blocks": {
+        "video_review_block_yipWDE": {
+          "type": "video_review_block",
+          "settings": {
+            "preview_image": "shopify:\/\/shop_images\/video-2.png",
+            "video_url": "https:\/\/www.youtube.com\/shorts\/zRC1KGlO8aI",
+            "review_text": "\"It`s amazing\"",
+            "review_author": "Kolya B."
+          }
+        },
+        "video_review_block_MaDCgk": {
+          "type": "video_review_block",
+          "settings": {
+            "preview_image": "shopify:\/\/shop_images\/video-1.png",
+            "video_url": "https:\/\/www.youtube.com\/shorts\/zRC1KGlO8aI",
+            "review_text": "\"That`s fine!\"",
+            "review_author": "Yura G."
+          }
+        },
+        "video_review_block_Y6EX7M": {
+          "type": "video_review_block",
+          "settings": {
+            "preview_image": "shopify:\/\/shop_images\/video-1.png",
+            "video_url": "https:\/\/www.youtube.com\/shorts\/zRC1KGlO8aI",
+            "review_text": "\"Oooasdaskv skdmvksdv\"",
+            "review_author": "Kesha L."
+          }
+        }
+      },
+      "block_order": [
+        "video_review_block_yipWDE",
+        "video_review_block_MaDCgk",
+        "video_review_block_Y6EX7M"
+      ],
+      "settings": {
+        "title": "Our customers reviews 2"
+      }
+    },
     "article_list_3XtB8E": {
       "type": "article-list",
       "settings": {
@@ -361,6 +401,7 @@
     "testimonials_jKXkq6",
     "image_with_text_p6zDi3",
     "video_reviews_MGMpGC",
+    "video_reviews_rBRL6A",
     "article_list_3XtB8E",
     "follow_us_RddBqK"
   ]

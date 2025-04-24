@@ -509,6 +509,13 @@
     padding: 40px 24px 0 24px;
 }
 
+.image-with-text--custom-container.text-only {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
 .image-with-text--custom-wrapper .text-only {
     display: block;
     padding: 50px 24px;

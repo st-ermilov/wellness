@@ -161,12 +161,16 @@
 
 
 
-
-
 .video-reviews-slider-pagination.swiper-pagination {
     display: flex;
     justify-content: center;
     bottom: -24px;
+}
+
+@media screen and (min-width: 1200px) {
+    .video-reviews-slider-pagination.swiper-pagination {
+        display: none;
+    }
 }
 
 .video-reviews-slider-pagination .swiper-pagination-bullet {
